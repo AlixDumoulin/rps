@@ -1,5 +1,6 @@
 /* @pjs preload="rock.jpg"; */
-
+/* @pjs preload="paper.jpg"; */
+/* @pjs preload="scissors.jpg"; */
 
 
 int comp;
@@ -12,8 +13,12 @@ PImage img3;
 
 void setup ()
 {
- size(500,500);
+size(500,500);
 background(255);
+img = loadImage("rock.jpg"); 
+img2 = loadImage("paper.jpg"); 
+img3 = loadImage("scissors.jpg"); 
+
 }
 
 void draw ()
@@ -30,23 +35,20 @@ if (keyPressed == true)
     
   if (key ==  'r')
     {
-    img = loadImage("rock.jpg"); 
     image(img,10,100);
 
     if (comp==1)
-      {img = loadImage("rock.jpg"); 
+      {
     image(img,250,100);
     text("You tied", 60,400);
       }
      else if (comp==2)
       {
-        img2 = loadImage("paper.jpg"); 
     image(img2,250,100);
     text("You lost", 60,400);  
       } 
      else if (comp==3)
       {
-        img3 = loadImage("scissors.jpg"); 
     image(img3,250,100);
       text("You won", 60,400);
       } 
@@ -54,24 +56,20 @@ if (keyPressed == true)
     
      else if (key ==  'p')
     {
-      img2 = loadImage("paper.jpg"); 
     image(img2,10,100);
     
     if (comp==1)
       {
-        img = loadImage("rock.jpg"); 
     image(img,250,100);
     text("You win", 60,400);
       }
      else if (comp==2)
       {
-        img2 = loadImage("paper.jpg"); 
     image(img2,250,100);
     text("You tied", 60,400);  
       } 
      else if (comp==3)
       {
-        img3 = loadImage("scissors.jpg"); 
     image(img3,250,100);
       text("You lost", 60,400);
       } 
@@ -79,24 +77,20 @@ if (keyPressed == true)
     
     else if (key == 's')
     {
-      img3 = loadImage("scissors.jpg"); 
     image(img3,10,100);
     
     if (comp==1)
       {
-        img = loadImage("rock.jpg"); 
     image(img,250,100);
     text("You lost", 60,400);
       }
      else if (comp==2)
       {
-        img2 = loadImage("paper.jpg"); 
     image(img2,250,100);
     text("You win", 60,400);  
       } 
      else if (comp==3)
       {
-        img3 = loadImage("scissors.jpg"); 
     image(img3,250,100);
       text("You tied", 60,400);
       } 
